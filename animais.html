@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoológico</title>
+    <link rel="stylesheet" href="animais.css"> <!-- Link para o arquivo CSS -->
+</head>
+
+<body>
+
+    <h1 class="title">Cadastro de Animais para o Zoológico</h1>
+
+    <div class="form-group">
+        <label for="id">Id</label>
+        <input type="text" id="id" class="input-field">
+        <input type="button" value="Procure" id="btProcure" class="button" onclick="procure()">
+        <input type="button" value="Inserir" id="btInserir" class="button" onclick="inserir()" style="display:none;">
+        <input type="button" value="Alterar" id="btAlterar" class="button" onclick="alterar()" style="display:none;">
+        <input type="button" value="Excluir" id="btExcluir" class="button" onclick="excluir()" style="display:none;">
+    </div>
+
+    <div class="form-group">
+        <label for="especie">Digite a Espécie do Animal:</label>
+        <input type="text" id="especie" class="input-field" placeholder="Ex: Leão">
+    </div>
+    
+    <div class="form-group">
+        <label for="nome">Digite o Nome do Animal:</label>
+        <input type="text" id="nome" class="input-field" placeholder="Ex: Leonidas">
+    </div>
+    
+    <div class="form-group">
+        <label for="cor">Cor do Animal:</label>
+        <input type="text" id="cor" class="input-field" placeholder="Ex: Dourado">
+    </div>
+    
+    <div class="form-group">
+        <label for="dataNascimento">Data de Nascimento do Animal:</label>
+        <input type="date" id="dataNascimento" class="input-field">
+    </div>
+    
+    <div class="form-group">
+        <label for="sexo">Selecione o Sexo do Animal:</label>
+        <select id="sexo" class="input-field">
+            <option value="" disabled selected>Selecione uma opção</option>
+            <option value="Macho">Macho</option>
+            <option value="Fêmea">Fêmea</option>
+        </select>
+    </div>
+    
+    <div class="form-group">
+        <label for="nivelPerigo">Nível de Perigo do Animal:</label>
+        <select id="nivelPerigo" class="input-field">
+            <option value="" disabled selected>Selecione uma opção</option>
+            <option value="Nenhum Perigo">0 - Nenhum Perigo</option>
+            <option value="Baixo Perigo">1 - Baixo Perigo</option>
+            <option value="Perigo Moderado">2 - Perigo Moderado</option>
+            <option value="Perigo Considerável">3 - Perigo Considerável</option>
+            <option value="Alto Perigo">4 - Alto Perigo</option>
+            <option value="Perigo Extremo">5 - Perigo Extremo</option>
+        </select>
+    </div>
+    
+    <div class="form-group">
+        <label for="tipoAlimentacao">Tipo de Alimentação:</label>
+        <input type="text" id="tipoAlimentacao" class="input-field" placeholder="Ex: Carne">
+    </div>
+
+    <div id="divAviso" class="alert"></div>
+
+    <div class="button-group">
+        <input type="button" value="Salvar" id="btSalvar" class="button" onclick="salvar()" style="display:none;">
+        <input type="button" value="Cancelar" id="btCancelar" class="button" onclick="cancelarOperacao()" style="display:none;">
+    </div>
+
+    <div id="outputSaida" class="output"></div>
+
+    <div class="button-group">
+        <button type="button" class="button" onclick="fazerDownload()">Salvar Dados</button>
+        <button type="button" class="button" onclick="fazerUpload()">Buscar Dados Salvos</button>
+    </div>
+
+    <script src="./animais.js"></script>
+    <script src="animaisControle.js"></script>
